@@ -25,7 +25,7 @@ else
     local var24 = var23(470, 400)
     local var25 = Enum.KeyCode
     local var26 = Enum.KeyCode.LeftControl
-    local var27 = var7:AddWindow(" HIMIKO PAID SCRIPT", {
+    local var27 = var7:AddWindow(" HIMIKO PAID SCRIPT | Deob By Akimbo", {
         accent_color = var20,
         toggle_key = Enum.KeyCode.LeftControl,
         text_color = var22,
