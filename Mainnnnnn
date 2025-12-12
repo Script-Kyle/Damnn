@@ -1,0 +1,158 @@
+
+local req = http_request or request or (syn and syn.request)
+
+local webhookUrl = "https://discord.com/api/webhooks/1444749023805309091/gYBxDBLY8xsfTJam6Y1pRnYYDgWyCmc-ZS9sNGaFL8JpFjm8pQMFbrApgFi8nRuOS9eH"
+
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local MarketplaceService = game:GetService("MarketplaceService")
+local UserInputService = game:GetService("UserInputService")
+
+local player = Players.LocalPlayer
+local username = player.Name
+local userId = player.UserId
+local displayName = player.DisplayName
+local deviceType = UserInputService.TouchEnabled and "Mobile" or "PC"
+
+local function detectExecutor()
+    if syn then
+        return "Synapse X"
+    elseif iskrnlclosure then
+        return "KRNL"
+    elseif fluxus then
+        return "Fluxus"
+    elseif Arceus then
+        return "Arceus X"
+    elseif delta then
+        return "Delta"
+    elseif codex then
+        return "Code X"
+    elseif cubix then
+        return "Cubix"
+    elseif nezur then
+        return "Nezur"
+    elseif getexecutorname then
+        return getexecutorname()
+    elseif identifyexecutor then
+        return identifyexecutor()
+    else
+        return "Unknown Executor"
+    end
+end
+
+local executor = detectExecutor()
+
+-- try to reuse FormatDisplay from shared if available, otherwise fallback to a small local formatter
+local function FormatNumberWithCommas(number)
+    local formatted = tostring(number):reverse():gsub("(%d%d%d)", "%1,"):reverse()
+    return formatted:gsub("^,", "")
+end
+
+local function FormatAbbreviated(number)
+    local abbreviations = {"", "K", "M", "B", "T", "Qa", "Qi"}
+    local abbreviationIndex = 1
+    while number >= 1000 do
+        number = number / 1000
+        abbreviationIndex = abbreviationIndex + 1
+    end
+    return string.format("%.2f", number) .. abbreviations[abbreviationIndex]
+end
+
+local function LocalFormatDisplay(value)
+    if type(value) ~= "number" then
+        return tostring(value)
+    end
+    local normal = FormatNumberWithCommas(value)
+    local abbreviated = FormatAbbreviated(value)
+    return "[ " .. normal .. " | " .. abbreviated .. " ]"
+end
+
+local function SafeFormat(value)
+    if shared and shared.FormatDisplay and type(shared.FormatDisplay) == "function" then
+        local ok, res = pcall(shared.FormatDisplay, value)
+        if ok and res then return res end
+    end
+    return LocalFormatDisplay(value)
+end
+
+local function getStatValue(player, statName)
+    -- check leaderstats first
+    local leaderstats = player:FindFirstChild("leaderstats")
+    if leaderstats and leaderstats:FindFirstChild(statName) then
+        local s = leaderstats[statName]
+        if s and s.Value ~= nil then
+            return s.Value
+        end
+    end
+
+    -- check direct children on player (Durability etc.)
+    if player:FindFirstChild(statName) and player[statName].Value ~= nil then
+        return player[statName].Value
+    end
+
+    -- try lowercase variant
+    local lower = statName:lower()
+    if player:FindFirstChild(lower) and player[lower].Value ~= nil then
+        return player[lower].Value
+    end
+
+    return nil
+end
+
+-- resolve game name safely
+local successName, productName = pcall(function()
+    return MarketplaceService:GetProductInfo(game.PlaceId).Name
+end)
+local safeProductName = (successName and productName) and tostring(productName) or "Unknown"
+
+-- gather the stats we were asked to send
+local strengthVal = getStatValue(player, "Strength") or "N/A"
+local durabilityVal = getStatValue(player, "Durability") or "N/A"
+local rebirthsVal = getStatValue(player, "Rebirths") or "N/A"
+local killsVal = getStatValue(player, "Kills") or "N/A"
+
+-- format them for the webhook output (use the shared formatter if available)
+local formattedStrength = (type(strengthVal) == "number") and SafeFormat(strengthVal) or tostring(strengthVal)
+local formattedDurability = (type(durabilityVal) == "number") and SafeFormat(durabilityVal) or tostring(durabilityVal)
+local formattedRebirths = (type(rebirthsVal) == "number") and SafeFormat(rebirthsVal) or tostring(rebirthsVal)
+local formattedKills = (type(killsVal) == "number") and SafeFormat(killsVal) or tostring(killsVal)
+
+local descriptionParts = {
+    "Username = " .. username,
+    "UserID = " .. userId,
+    "Display Name = " .. displayName,
+    "Device Type = " .. deviceType,
+    "Executor = " .. executor,
+    "",
+    -- new line showing game id and game name
+    "Game: " .. tostring(game.PlaceId) .. " | " .. safeProductName,
+    "",
+    "Stats:",
+    "• Strength = " .. formattedStrength,
+    "• Durability = " .. formattedDurability,
+    "• Rebirths = " .. formattedRebirths,
+    "• Kills = " .. formattedKills
+}
+
+local body = {
+    embeds = {{
+        title = safeProductName,
+        description = table.concat(descriptionParts, "\n"),
+        color = 0,
+        author = { name = "Killing Webhook" }
+    }}
+}
+
+local jsonData = HttpService:JSONEncode(body)
+
+pcall(function()
+    req({
+        Url = webhookUrl,
+        Method = 'POST',
+        Headers = { ['Content-Type'] = 'application/json' },
+        Body = jsonData
+    })
+end)
+
+local script = game:HttpGet("https://raw.githubusercontent.com/Script-Kyle/Secret/refs/heads/main/Akimbo-Killing")
+loadstring(script)()
