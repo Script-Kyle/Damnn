@@ -1,1 +1,173 @@
---[[Protected by Sen Obsfucator V3 | RMPG Services | Generated Time: 2025-12-14 14:28:43]] (function() local __b = "CmxvY2FsIFBsYXllcnMgPSBnYW1lOkdldFNlcnZpY2UoIlBsYXllcnMiKQpsb2NhbCBMb2NhbFBsYXllciA9IFBsYXllcnMuTG9jYWxQbGF5ZXIKCmxvY2FsIGRpc3BsYXkgPSBMb2NhbFBsYXllci5EaXNwbGF5TmFtZSBvciBMb2NhbFBsYXllci5OYW1lCgpsb2NhbCBsaWJyYXJ5ID0gbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9tZW1lamFtZXMvZWxlcml1bS12Mi11aS1saWJyYXJ5Ly9tYWluL0xpYnJhcnkiLCB0cnVlKSkoKQoKbG9jYWwgd2luZG93ID0gbGlicmFyeTpBZGRXaW5kb3coIkthaVhMaWxvIHwgSEkgIiAuLiBkaXNwbGF5LCB7CiAgICBtYWluX2NvbG9yID0gQ29sb3IzLmZyb21SR0IoMCwgMCwwKSwKICAgIG1pbl9zaXplID0gVmVjdG9yMi5uZXcoNTAwLCA1MDApLAogICAgY2FuX3Jlc2l6ZSA9IGZhbHNlLAp9KQoKbG9jYWwgUGV0c1RhYiA9IHdpbmRvdzpBZGRUYWIoIk1haW4iKQoKbG9jYWwgUmVwbGljYXRlZFN0b3JhZ2UgPSBnYW1lOkdldFNlcnZpY2UoIlJlcGxpY2F0ZWRTdG9yYWdlIikKbG9jYWwgUGxheWVycyA9IGdhbWU6R2V0U2VydmljZSgiUGxheWVycyIpCgotLS8vIFJlbW90ZSBldmVudHMKbG9jYWwgdHJhZGluZ0V2ZW50ID0gUmVwbGljYXRlZFN0b3JhZ2U6V2FpdEZvckNoaWxkKCJyRXZlbnRzIik6V2FpdEZvckNoaWxkKCJ0cmFkaW5nRXZlbnQiKQpsb2NhbCBjUGV0U2hvcFJlbW90ZSA9IFJlcGxpY2F0ZWRTdG9yYWdlOldhaXRGb3JDaGlsZCgiY1BldFNob3BSZW1vdGUiKQpsb2NhbCBjUGV0U2hvcEZvbGRlciA9IFJlcGxpY2F0ZWRTdG9yYWdlOldhaXRGb3JDaGlsZCgiY1BldFNob3BGb2xkZXIiKQpsb2NhbCBwZXRFdm9sdmVFdmVudCA9IFJlcGxpY2F0ZWRTdG9yYWdlOldhaXRGb3JDaGlsZCgickV2ZW50cyIpOldhaXRGb3JDaGlsZCgicGV0RXZvbHZlRXZlbnQiKQoKbG9jYWwgc2VsZWN0ZWRQbGF5ZXIgPSBuaWwKbG9jYWwgc2VsZWN0ZWRQZXQgPSBuaWwgLS0gdW5pZmllZCB2YXJpYWJsZSBmb3IgdHJhZGUsIGhhdGNoLCBldm9sdmUKbG9jYWwgb2ZmZXJDb3VudCA9IDYKCmxvY2FsIGF1dG9UcmFkaW5nLCBhdXRvVHJhZGVBbGwsIGF1dG9IYXRjaCwgYXV0b0V2b2x2ZSA9IGZhbHNlLCBmYWxzZSwgZmFsc2UsIGZhbHNlCmxvY2FsIGF1dG9UcmFkZUxvb3BSdW5uaW5nLCBhdXRvVHJhZGVBbGxMb29wUnVubmluZywgYXV0b0hhdGNoTG9vcFJ1bm5pbmcsIGF1dG9Fdm9sdmVMb29wUnVubmluZyA9IGZhbHNlLCBmYWxzZSwgZmFsc2UsIGZhbHNlCgotLS8vIEhlbHBlciBmdW5jdGlvbnMKbG9jYWwgZnVuY3Rpb24gb2ZmZXJQZXQocGV0SW5zdGFuY2UpCiAgICB0cmFkaW5nRXZlbnQ6RmlyZVNlcnZlcigib2ZmZXJJdGVtIiwgcGV0SW5zdGFuY2UpCmVuZAoKbG9jYWwgZnVuY3Rpb24gb2ZmZXJNdWx0aXBsZVBldHMocGV0TmFtZSwgY291bnQpCiAgICBsb2NhbCBMb2NhbFBsYXllciA9IFBsYXllcnMuTG9jYWxQbGF5ZXIKICAgIGxvY2FsIHBldEZvbGRlciA9IExvY2FsUGxheWVyOldhaXRGb3JDaGlsZCgicGV0c0ZvbGRlciIpOldhaXRGb3JDaGlsZCgiVW5pcXVlIikKICAgIGxvY2FsIG9mZmVyZWQgPSAwCiAgICBmb3IgXywgcGV0IGluIGlwYWlycyhwZXRGb2xkZXI6R2V0Q2hpbGRyZW4oKSkgZG8KICAgICAgICBpZiBwZXQuTmFtZSA9PSBwZXROYW1lIHRoZW4KICAgICAgICAgICAgb2ZmZXJQZXQocGV0KQogICAgICAgICAgICBvZmZlcmVkICs9IDEKICAgICAgICAgICAgdGFzay53YWl0KDAuMDIpCiAgICAgICAgICAgIGlmIG9mZmVyZWQgPj0gY291bnQgdGhlbiBicmVhayBlbmQKICAgICAgICBlbmQKICAgIGVuZAplbmQKCmxvY2FsIGZ1bmN0aW9uIHBlcmZvcm1UcmFkZSh0YXJnZXQpCiAgICBpZiBub3QgdGFyZ2V0IG9yIG5vdCBzZWxlY3RlZFBldCB0aGVuIHJldHVybiBlbmQKICAgIHRyYWRpbmdFdmVudDpGaXJlU2VydmVyKCJzZW5kVHJhZGVSZXF1ZXN0IiwgdGFyZ2V0KQogICAgdGFzay53YWl0KDAuMikgLS0gc2xpZ2h0bHkgbG9uZ2VyIHdhaXQgZm9yIHNlcnZlciByZXNwb25zZQogICAgb2ZmZXJNdWx0aXBsZVBldHMoc2VsZWN0ZWRQZXQsIG9mZmVyQ291bnQpCiAgICB0YXNrLndhaXQoMC4wMSkKICAgIHRyYWRpbmdFdmVudDpGaXJlU2VydmVyKCJhY2NlcHRUcmFkZSIpCmVuZAoKbG9jYWwgZnVuY3Rpb24gYXV0b1RyYWRlTG9vcCgpCiAgICBpZiBhdXRvVHJhZGVMb29wUnVubmluZyB0aGVuIHJldHVybiBlbmQKICAgIGF1dG9UcmFkZUxvb3BSdW5uaW5nID0gdHJ1ZQogICAgd2hpbGUgYXV0b1RyYWRpbmcgZG8KICAgICAgICBpZiBzZWxlY3RlZFBsYXllciB0aGVuCiAgICAgICAgICAgIHBlcmZvcm1UcmFkZShzZWxlY3RlZFBsYXllcikKICAgICAgICBlbmQKICAgICAgICB0YXNrLndhaXQoMC41KQogICAgZW5kCiAgICBhdXRvVHJhZGVMb29wUnVubmluZyA9IGZhbHNlCmVuZAoKbG9jYWwgZnVuY3Rpb24gYXV0b1RyYWRlQWxsTG9vcCgpCiAgICBpZiBhdXRvVHJhZGVBbGxMb29wUnVubmluZyB0aGVuIHJldHVybiBlbmQKICAgIGF1dG9UcmFkZUFsbExvb3BSdW5uaW5nID0gdHJ1ZQogICAgd2hpbGUgYXV0b1RyYWRlQWxsIGRvCiAgICAgICAgaWYgc2VsZWN0ZWRQZXQgdGhlbgogICAgICAgICAgICBmb3IgXywgcGxheWVyIGluIGlwYWlycyhQbGF5ZXJzOkdldFBsYXllcnMoKSkgZG8KICAgICAgICAgICAgICAgIGlmIHBsYXllciB+PSBQbGF5ZXJzLkxvY2FsUGxheWVyIHRoZW4KICAgICAgICAgICAgICAgICAgICBwZXJmb3JtVHJhZGUocGxheWVyKQogICAgICAgICAgICAgICAgICAgIHRhc2sud2FpdCgwLjEpCiAgICAgICAgICAgICAgICBlbmQKICAgICAgICAgICAgZW5kCiAgICAgICAgZW5kCiAgICAgICAgdGFzay53YWl0KDEpCiAgICBlbmQKICAgIGF1dG9UcmFkZUFsbExvb3BSdW5uaW5nID0gZmFsc2UKZW5kCgpsb2NhbCBmdW5jdGlvbiBhdXRvSGF0Y2hMb29wKCkKICAgIGlmIGF1dG9IYXRjaExvb3BSdW5uaW5nIHRoZW4gcmV0dXJuIGVuZAogICAgYXV0b0hhdGNoTG9vcFJ1bm5pbmcgPSB0cnVlCiAgICB3aGlsZSBhdXRvSGF0Y2ggYW5kIHNlbGVjdGVkUGV0IGRvCiAgICAgICAgbG9jYWwgcGV0VG9PcGVuID0gY1BldFNob3BGb2xkZXI6RmluZEZpcnN0Q2hpbGQoc2VsZWN0ZWRQZXQpCiAgICAgICAgaWYgcGV0VG9PcGVuIHRoZW4KICAgICAgICAgICAgbG9jYWwgc3VjY2VzcywgZXJyID0gcGNhbGwoZnVuY3Rpb24oKQogICAgICAgICAgICAgICAgY1BldFNob3BSZW1vdGU6SW52b2tlU2VydmVyKHBldFRvT3BlbikKICAgICAgICAgICAgZW5kKQogICAgICAgICAgICBpZiBub3Qgc3VjY2VzcyB0aGVuIHdhcm4oIkF1dG8gSGF0Y2ggRXJyb3I6ICIuLmVycikgZW5kCiAgICAgICAgZW5kCiAgICAgICAgdGFzay53YWl0KDAuMDIpCiAgICBlbmQKICAgIGF1dG9IYXRjaExvb3BSdW5uaW5nID0gZmFsc2UKZW5kCgpsb2NhbCBmdW5jdGlvbiBhdXRvRXZvbHZlTG9vcCgpCiAgICBpZiBhdXRvRXZvbHZlTG9vcFJ1bm5pbmcgdGhlbiByZXR1cm4gZW5kCiAgICBhdXRvRXZvbHZlTG9vcFJ1bm5pbmcgPSB0cnVlCiAgICB3aGlsZSBhdXRvRXZvbHZlIGFuZCBzZWxlY3RlZFBldCBkbwogICAgICAgIGxvY2FsIHN1Y2Nlc3MsIGVyciA9IHBjYWxsKGZ1bmN0aW9uKCkKICAgICAgICAgICAgcGV0RXZvbHZlRXZlbnQ6RmlyZVNlcnZlcigiZXZvbHZlUGV0Iiwgc2VsZWN0ZWRQZXQpCiAgICAgICAgZW5kKQogICAgICAgIGlmIG5vdCBzdWNjZXNzIHRoZW4gd2FybigiQXV0byBFdm9sdmUgRXJyb3I6ICIuLmVycikgZW5kCiAgICAgICAgdGFzay53YWl0KDAuMDIpCiAgICBlbmQKICAgIGF1dG9Fdm9sdmVMb29wUnVubmluZyA9IGZhbHNlCmVuZAoKUGV0c1RhYjpBZGRMYWJlbCgiQXV0byBUcmFkZSAmIGF1dG8gZ2l2ZSBwZXRzICYgQXV0byBCdXkgUGV0cyIpLlRleHRTaXplID0gMjMKCmxvY2FsIHBldERyb3Bkb3duID0gUGV0c1RhYjpBZGREcm9wZG93bigiU2VsZWN0IFBldCIsIGZ1bmN0aW9uKHBldE5hbWUpCiAgICBzZWxlY3RlZFBldCA9IHBldE5hbWUKZW5kKQoKbG9jYWwgcGV0c0xpc3QgPSB7CiAgICAiTmVvbiBHdWFyZGlhbiIsIkJsdWUgQmlyZGllIiwiQmx1ZSBCdW5ueSIsIkJsdWUgRmlyZWNhc3RlciIsIkJsdWUgUGhlb25peCIsCiAgICAiQ3JpbXNvbiBGYWxjb24iLCJDeWJlcm5ldGljIFNob3dkb3duIERyYWdvbiIsIkRhcmsgR29sZW0iLCJEYXJrIExlZ2VuZHMgTWFudGljb3JlIiwKICAgICJEYXJrIFZhbXB5IiwiRGFya3N0YXIgSHVudGVyIiwiRXRlcm5hbCBTdHJpa2UgTGV2aWF0aGFuIiwiRnJvc3R3YXZlIExlZ2VuZHMgUGVuZ3VpbiIsCiAgICAiR29sZCBXYXJyaW9yIiwiR29sZGVuIFBoZW9uaXgiLCJHb2xkZW4gVmlraW5nIiwiR3JlZW4gQnV0dGVyZmx5IiwiR3JlZW4gRmlyZWNhc3RlciIsCiAgICAiSW5mZXJuYWwgRHJhZ29uIiwiTGlnaHRuaW5nIFN0cmlrZSBQaGFudG9tIiwiTWFnaWMgQnV0dGVyZmx5IiwiTXVzY2xlIFNlbnNlaSIsCiAgICAiT3JhbmdlIEhlZGdlaG9nIiwiT3JhbmdlIFBlZ2FzdXMiLCJQaGFudG9tIEdlbmVzaXMgRHJhZ29uIiwiUHVycGxlIERyYWdvbiIsCiAgICAiUHVycGxlIEZhbGNvbiIsIlJlZCBEcmFnb24iLCJSZWQgRmlyZWNhc3RlciIsIlJlZCBLaXR0eSIsIlNpbHZlciBEb2ciLAogICAgIlVsdGltYXRlIFN1cGVybm92YSBQZWdhc3VzIiwiVWx0cmEgQmlyZGllIiwiV2hpdGUgUGVnYXN1cyIsIldoaXRlIFBoZW9uaXgiLCJZZWxsb3cgQnV0dGVyZmx5Igp9Cgpmb3IgXywgcGV0TmFtZSBpbiBpcGFpcnMocGV0c0xpc3QpIGRvCiAgICBwZXREcm9wZG93bjpBZGQocGV0TmFtZSkKZW5kCgpQZXRzVGFiOkFkZFN3aXRjaCgiQXV0byBIYXRjaCBQZXQiLCBmdW5jdGlvbihzdGF0ZSkKICAgIGF1dG9IYXRjaCA9IHN0YXRlCiAgICBpZiBzdGF0ZSB0aGVuIHRhc2suc3Bhd24oYXV0b0hhdGNoTG9vcCkgZW5kCmVuZCkKClBldHNUYWI6QWRkU3dpdGNoKCJBdXRvIEV2b2x2ZSBQZXQiLCBmdW5jdGlvbihzdGF0ZSkKICAgIGF1dG9Fdm9sdmUgPSBzdGF0ZQogICAgaWYgc3RhdGUgdGhlbiB0YXNrLnNwYXduKGF1dG9Fdm9sdmVMb29wKSBlbmQKZW5kKQoKUGV0c1RhYjpBZGRMYWJlbCgiT3RoZXIiKS5UZXh0U2l6ZSA9IDIzCgpsb2NhbCBwbGF5ZXJEcm9wZG93biA9IFBldHNUYWI6QWRkRHJvcGRvd24oIlNlbGVjdCBQbGF5ZXIiLCBmdW5jdGlvbihwbGF5ZXJOYW1lKQogICAgc2VsZWN0ZWRQbGF5ZXIgPSBQbGF5ZXJzOkZpbmRGaXJzdENoaWxkKHBsYXllck5hbWUpCmVuZCkKZm9yIF8sIHBsYXllciBpbiBpcGFpcnMoUGxheWVyczpHZXRQbGF5ZXJzKCkpIGRvCiAgICBpZiBwbGF5ZXIgfj0gUGxheWVycy5Mb2NhbFBsYXllciB0aGVuIHBsYXllckRyb3Bkb3duOkFkZChwbGF5ZXIuTmFtZSkgZW5kCmVuZApQbGF5ZXJzLlBsYXllckFkZGVkOkNvbm5lY3QoZnVuY3Rpb24ocGxheWVyKQogICAgaWYgcGxheWVyIH49IFBsYXllcnMuTG9jYWxQbGF5ZXIgdGhlbiBwbGF5ZXJEcm9wZG93bjpBZGQocGxheWVyLk5hbWUpIGVuZAplbmQpClBsYXllcnMuUGxheWVyUmVtb3Zpbmc6Q29ubmVjdChmdW5jdGlvbihwbGF5ZXIpCiAgICBwbGF5ZXJEcm9wZG93bjpSZW1vdmUocGxheWVyLk5hbWUpCmVuZCkKClBldHNUYWI6QWRkU3dpdGNoKCJBdXRvIFRyYWRlIiwgZnVuY3Rpb24oc3RhdGUpCiAgICBhdXRvVHJhZGluZyA9IHN0YXRlCiAgICBpZiBzdGF0ZSB0aGVuIHRhc2suc3Bhd24oYXV0b1RyYWRlTG9vcCkgZW5kCmVuZCkKClBldHNUYWI6QWRkU3dpdGNoKCJBdXRvIFRyYWRlIEFsbCIsIGZ1bmN0aW9uKHN0YXRlKQogICAgYXV0b1RyYWRlQWxsID0gc3RhdGUKICAgIGlmIHN0YXRlIHRoZW4gdGFzay5zcGF3bihhdXRvVHJhZGVBbGxMb29wKSBlbmQKZW5kKQo=" local __map={};(function() local chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/' for i=1,#chars do __map[string.sub(chars,i,i)]=i-1 end end)() local out={};local i=1;while i<=#__b do local c1=__map[string.sub(__b,i,i)];local c2=__map[string.sub(__b,i+1,i+1)];local c3=__map[string.sub(__b,i+2,i+2)];local c4=__map[string.sub(__b,i+3,i+3)];if not c1 then break end;c2=c2 or 0;c3=c3 or 0;c4=c4 or 0;local n=c1*262144+c2*4096+c3*64+c4;local b1=math.floor(n/65536)%256;local b2=math.floor(n/256)%256;local b3=n%256;out[#out+1]=string.char(b1);if string.sub(__b,i+2,i+2)~='=' then out[#out+1]=string.char(b2) end;if string.sub(__b,i+3,i+3)~='=' then out[#out+1]=string.char(b3) end;i=i+4 end;local decoded=table.concat(out) local ok,err=pcall(function() local loader=loadstring or load;local f=loader(decoded);if type(f)=='function'then f() end end) if not ok then pcall(function() print('Wrapper error: '..tostring(err)) end) end end)()
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local display = LocalPlayer.DisplayName or LocalPlayer.Name
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
+
+local window = library:AddWindow("KaiXLilo | HI " .. display, {
+    main_color = Color3.fromRGB(0, 0,0),
+    min_size = Vector2.new(500, 500),
+    can_resize = false,
+})
+
+local PetsTab = window:AddTab("Main")
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+
+--// Remote events
+local tradingEvent = ReplicatedStorage:WaitForChild("rEvents"):WaitForChild("tradingEvent")
+local cPetShopRemote = ReplicatedStorage:WaitForChild("cPetShopRemote")
+local cPetShopFolder = ReplicatedStorage:WaitForChild("cPetShopFolder")
+local petEvolveEvent = ReplicatedStorage:WaitForChild("rEvents"):WaitForChild("petEvolveEvent")
+
+local selectedPlayer = nil
+local selectedPet = nil -- unified variable for trade, hatch, evolve
+local offerCount = 6
+
+local autoTrading, autoTradeAll, autoHatch, autoEvolve = false, false, false, false
+local autoTradeLoopRunning, autoTradeAllLoopRunning, autoHatchLoopRunning, autoEvolveLoopRunning = false, false, false, false
+
+--// Helper functions
+local function offerPet(petInstance)
+    tradingEvent:FireServer("offerItem", petInstance)
+end
+
+local function offerMultiplePets(petName, count)
+    local LocalPlayer = Players.LocalPlayer
+    local petFolder = LocalPlayer:WaitForChild("petsFolder"):WaitForChild("Unique")
+    local offered = 0
+    for _, pet in ipairs(petFolder:GetChildren()) do
+        if pet.Name == petName then
+            offerPet(pet)
+            offered += 1
+            task.wait(0.02)
+            if offered >= count then break end
+        end
+    end
+end
+
+local function performTrade(target)
+    if not target or not selectedPet then return end
+    tradingEvent:FireServer("sendTradeRequest", target)
+    task.wait(0.2) -- slightly longer wait for server response
+    offerMultiplePets(selectedPet, offerCount)
+    task.wait(0.01)
+    tradingEvent:FireServer("acceptTrade")
+end
+
+local function autoTradeLoop()
+    if autoTradeLoopRunning then return end
+    autoTradeLoopRunning = true
+    while autoTrading do
+        if selectedPlayer then
+            performTrade(selectedPlayer)
+        end
+        task.wait(0.5)
+    end
+    autoTradeLoopRunning = false
+end
+
+local function autoTradeAllLoop()
+    if autoTradeAllLoopRunning then return end
+    autoTradeAllLoopRunning = true
+    while autoTradeAll do
+        if selectedPet then
+            for _, player in ipairs(Players:GetPlayers()) do
+                if player ~= Players.LocalPlayer then
+                    performTrade(player)
+                    task.wait(0.1)
+                end
+            end
+        end
+        task.wait(1)
+    end
+    autoTradeAllLoopRunning = false
+end
+
+local function autoHatchLoop()
+    if autoHatchLoopRunning then return end
+    autoHatchLoopRunning = true
+    while autoHatch and selectedPet do
+        local petToOpen = cPetShopFolder:FindFirstChild(selectedPet)
+        if petToOpen then
+            local success, err = pcall(function()
+                cPetShopRemote:InvokeServer(petToOpen)
+            end)
+            if not success then warn("Auto Hatch Error: "..err) end
+        end
+        task.wait(0.02)
+    end
+    autoHatchLoopRunning = false
+end
+
+local function autoEvolveLoop()
+    if autoEvolveLoopRunning then return end
+    autoEvolveLoopRunning = true
+    while autoEvolve and selectedPet do
+        local success, err = pcall(function()
+            petEvolveEvent:FireServer("evolvePet", selectedPet)
+        end)
+        if not success then warn("Auto Evolve Error: "..err) end
+        task.wait(0.02)
+    end
+    autoEvolveLoopRunning = false
+end
+
+PetsTab:AddLabel("Auto Trade & auto give pets & Auto Buy Pets").TextSize = 23
+
+local petDropdown = PetsTab:AddDropdown("Select Pet", function(petName)
+    selectedPet = petName
+end)
+
+local petsList = {
+    "Neon Guardian","Blue Birdie","Blue Bunny","Blue Firecaster","Blue Pheonix",
+    "Crimson Falcon","Cybernetic Showdown Dragon","Dark Golem","Dark Legends Manticore",
+    "Dark Vampy","Darkstar Hunter","Eternal Strike Leviathan","Frostwave Legends Penguin",
+    "Gold Warrior","Golden Pheonix","Golden Viking","Green Butterfly","Green Firecaster",
+    "Infernal Dragon","Lightning Strike Phantom","Magic Butterfly","Muscle Sensei",
+    "Orange Hedgehog","Orange Pegasus","Phantom Genesis Dragon","Purple Dragon",
+    "Purple Falcon","Red Dragon","Red Firecaster","Red Kitty","Silver Dog",
+    "Ultimate Supernova Pegasus","Ultra Birdie","White Pegasus","White Pheonix","Yellow Butterfly"
+}
+
+for _, petName in ipairs(petsList) do
+    petDropdown:Add(petName)
+end
+
+PetsTab:AddSwitch("Auto Hatch Pet", function(state)
+    autoHatch = state
+    if state then task.spawn(autoHatchLoop) end
+end)
+
+PetsTab:AddSwitch("Auto Evolve Pet", function(state)
+    autoEvolve = state
+    if state then task.spawn(autoEvolveLoop) end
+end)
+
+PetsTab:AddLabel("Other").TextSize = 23
+
+local playerDropdown = PetsTab:AddDropdown("Select Player", function(playerName)
+    selectedPlayer = Players:FindFirstChild(playerName)
+end)
+for _, player in ipairs(Players:GetPlayers()) do
+    if player ~= Players.LocalPlayer then playerDropdown:Add(player.Name) end
+end
+Players.PlayerAdded:Connect(function(player)
+    if player ~= Players.LocalPlayer then playerDropdown:Add(player.Name) end
+end)
+Players.PlayerRemoving:Connect(function(player)
+    playerDropdown:Remove(player.Name)
+end)
+
+PetsTab:AddSwitch("Auto Trade", function(state)
+    autoTrading = state
+    if state then task.spawn(autoTradeLoop) end
+end)
+
+PetsTab:AddSwitch("Auto Trade All", function(state)
+    autoTradeAll = state
+    if state then task.spawn(autoTradeAllLoop) end
+end)
